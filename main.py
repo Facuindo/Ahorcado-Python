@@ -28,6 +28,18 @@ def verificar_letra(letra, palabra_secreta):
     else:
         return False
 
+
+def validar_palabra(letras_usadas, palabra_secreta):
+    for i in palabra_secreta:
+        if i in letras_usadas:
+            es_ganador = True
+        else:
+            es_ganador = False
+            break
+    if es_ganador == True:
+        return True
+
+
 if __name__ == "__main__":
     print("\n¡Aquí comienza el juego del ahorcado!\n")
     # Inicializo las variables y listas a utilizar.
