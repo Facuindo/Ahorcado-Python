@@ -1,10 +1,32 @@
-#Aplicacion de funciones, ciclos y condicionales para resolucion de ahorcado
 import random
 import interfaz
+
+#Aplicacion de funciones, ciclos y condicionales para resolucion de ahorcado
 def leer_palabra_secreta(palabras):
     palabra_secreta = random.choice(palabras)
     return palabra_secreta
 
+
+def pedir_letra(letras_usadas):
+    while True:
+        letra = input("Ingrese una letra: ").lower()
+        if letra in letras_usadas:
+            print("Ingrese una letra que no se haya utilizado antes")
+        elif len(letra) != 1:
+            print("Ingrese solo una letra")
+        elif letra.isalpha() == False:
+            print("Se debe ingresar una letra")
+        else:
+            break
+    letras_usadas.append(letra)
+    return letra
+
+
+def verificar_letra(letra, palabra_secreta):
+    if letra in palabra_secreta:
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
     print("\n¡Aquí comienza el juego del ahorcado!\n")
