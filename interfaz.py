@@ -1,8 +1,7 @@
-# Python Inicial [Python]
-# Ejercicio integrador
 
-# Autor: Inove Coding School
-# Version: 2.0
+# Ejercicio integrador
+# Inove Coding School
+
 
 imagenes = [
     '''    
